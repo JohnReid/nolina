@@ -9,6 +9,7 @@ Naive NumPy (and eventually TensorFlow) implementations of randomised linear alg
 | Rayleigh iteration | :heavy_check_mark: |                    |
 | Jacobi             |                    |                    |
 | Steepest descent   | :heavy_check_mark: |                    |
+| Conjugate gradient | :heavy_check_mark: |                    |
 
 
 ### Installation
