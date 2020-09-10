@@ -8,6 +8,7 @@ Naive NumPy (and eventually TensorFlow) implementations of randomised linear alg
 | inverse iteration  | :heavy_check_mark: |                    |
 | Rayleigh iteration | :heavy_check_mark: |                    |
 | Jacobi             |                    |                    |
+| Steepest descent   | :heavy_check_mark: |                    |
 
 
 ### Installation
