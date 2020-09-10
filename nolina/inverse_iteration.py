@@ -1,4 +1,4 @@
-"""Implement the inverse iteration method from von Wielandt and Rayleigh."""
+"""Implement the inverse iteration methods from von Wielandt and Rayleigh."""
 
 import numpy as np
 import numpy.linalg as la
@@ -7,6 +7,7 @@ from nolina import random, normalise
 
 
 def inverse_iteration(A, lambda_, niter, y0=None, random_state=None):
+    """von Wielandt inverse iteration method."""
     lu, piv = lu_factor(A - lambda_ * np.eye(A.shape[0]))
     return inverse_iteration_lu(lu, piv, lambda_, niter, y0=None, random_state=None)
 
@@ -23,6 +24,7 @@ def inverse_iteration_lu(lu, piv, lambda_, niter, y0=None, random_state=None):
 
 
 def rayleigh_iteration(A, lambda_, niter, y0=None, random_state=None):
+    """Rayleigh inverse iteration method."""
     y0 = random.get_start_vector(d=A.shape[0], y0=y0, random_state=random_state)
     x0 = normalise(y0)
     for _ in range(niter):
