@@ -2,12 +2,12 @@
 
 Naive NumPy (and eventually TensorFlow) implementations of randomised linear algorithms, including:
 
-| Method             | NumPy         | TensorFlow |
-| ------------------ |:-------------:| ----------:|
-| power              | [x]           | [ ]        |
-| inverse iteration  | [x]           | [ ]        |
-| Rayleigh iteration | [x]           | [ ]        |
-| Jacobi             | [ ]           | [ ]        |
+| Method             | NumPy              | TensorFlow         |
+| ------------------ |:------------------:| ------------------:|
+| power              | :heavy_check_mark: |                    |
+| inverse iteration  | :heavy_check_mark: |                    |
+| Rayleigh iteration | :heavy_check_mark: |                    |
+| Jacobi             |                    |                    |
 
 
 ### Installation
