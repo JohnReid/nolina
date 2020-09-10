@@ -4,6 +4,7 @@ Naive NumPy (and eventually TensorFlow) implementations of randomised linear alg
 
 - power method (von Mises iteration)
 - inverse iteration method (von Wielandt)
+- Rayleigh iteration method (Rayleigh)
 
 
 ### Installation
