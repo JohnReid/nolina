@@ -1,25 +1,17 @@
 """Implement the power method."""
 
 import numpy as np
-from scipy import stats
+import numpy.linalg as la
+import nolina
+from nolina import random
 
 
-_standard_normal = stats.norm()
-
-
-def random_matrix(d: int, random_state=None):
-    return _standard_normal.rvs(size=(d, d), random_state=random_state)
-
-
-def normalise(v):
-    norm = np.linalg.norm(v)
-    return v if 0 == norm else v / norm
-
-
-def power_method(A, niter, random_state=None):
-    d = A.shape[0]
-    y = np.empty((niter + 1, d))
-    y[0] = _standard_normal.rvs(size=d, random_state=random_state)
-    for m in range(1, niter + 1):
-        y[m] = normalise(A @ y[m - 1])
-    return y[niter]
+def power_method(A, niter, y0=None, random_state=None):
+    y0 = random.get_start_vector(d=A.shape[0], y0=y0, random_state=random_state)
+    x0 = nolina.normalise(y0)
+    for _ in range(niter):
+        y0 = A @ x0
+        sigma = -1 if np.dot(y0, x0) < 0 else 1
+        y0 *= sigma
+        x0 = nolina.normalise(y0)
+    return la.norm(y0), x0, sigma

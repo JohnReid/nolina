@@ -1,3 +1,5 @@
 ## Nolina
 
-Randomised linear algorithms
+Randomised linear algorithms, including:
+
+- power method
