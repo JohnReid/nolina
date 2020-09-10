@@ -23,4 +23,5 @@ dependencies:
   - pip:
     - pynvim
     - pytest-rng
+    - git+git://github.com/realpython/codetiming@master
     - -e .
