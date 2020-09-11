@@ -7,6 +7,7 @@ from nolina import random
 
 
 def power_method(A, niter, y0=None, random_state=None):
+    """Power iteration method. Definition 5.12."""
     y0 = random.get_start_vector(d=A.shape[0], y0=y0, random_state=random_state)
     x0 = nolina.normalise(y0)
     for _ in range(niter):

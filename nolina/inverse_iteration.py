@@ -7,12 +7,13 @@ from nolina import random, normalise
 
 
 def inverse_iteration(A, lambda_, niter, y0=None, random_state=None):
-    """von Wielandt inverse iteration method."""
+    """von Wielandt inverse iteration method. Definition 5.14."""
     lu, piv = lu_factor(A - lambda_ * np.eye(A.shape[0]))
     return inverse_iteration_lu(lu, piv, lambda_, niter, y0=None, random_state=None)
 
 
 def inverse_iteration_lu(lu, piv, lambda_, niter, y0=None, random_state=None):
+    """von Wielandt inverse iteration method with pre-calculated LU decomposition. Definition 5.14."""
     y0 = random.get_start_vector(d=lu.shape[0], y0=y0, random_state=random_state)
     x0 = normalise(y0)
     for _ in range(niter):
@@ -24,7 +25,7 @@ def inverse_iteration_lu(lu, piv, lambda_, niter, y0=None, random_state=None):
 
 
 def rayleigh_iteration(A, lambda_, niter, y0=None, random_state=None):
-    """Rayleigh inverse iteration method."""
+    """Rayleigh inverse iteration method. Algorithm 11."""
     y0 = random.get_start_vector(d=A.shape[0], y0=y0, random_state=random_state)
     x0 = normalise(y0)
     for _ in range(niter):

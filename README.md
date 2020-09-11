@@ -10,6 +10,13 @@ Naive NumPy (and eventually TensorFlow) implementations of randomised linear alg
 | Jacobi             |                    |                    |
 | Steepest descent   | :heavy_check_mark: |                    |
 | Conjugate gradient | :heavy_check_mark: |                    |
+| Arnoldi            | :heavy_check_mark: |                    |
+
+
+### References
+
+- Wendland, Holger. Numerical Linear Algebra: An Introduction. Cambridge Texts in Applied Mathematics. Cambridge University Press, 2017.
+
 
 
 ### Installation
