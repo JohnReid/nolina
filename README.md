@@ -16,6 +16,8 @@ Naive NumPy (and eventually TensorFlow) implementations of randomised linear alg
 ### References
 
 - Wendland, Holger. Numerical Linear Algebra: An Introduction. Cambridge Texts in Applied Mathematics. Cambridge University Press, 2017.
+- Mahoney, Michael W. ‘Lecture Notes on Randomized Linear Algebra’. ArXiv Preprint ArXiv:1608.04481, 2016. http://arxiv.org/abs/1608.04481.
+
 
 
 
