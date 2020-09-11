@@ -8,10 +8,6 @@ _logger = logging.getLogger(__name__)
 js = [9, 10, 11]
 
 
-def close_to_orthonormal(v):
-    return (np.eye(v.shape[0]) == v @ v.T).allclose()
-
-
 @pytest.mark.parametrize("j", js)
 def test_arnoldi(j, rng, seed):
     d = 11
