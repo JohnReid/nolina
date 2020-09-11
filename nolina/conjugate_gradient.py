@@ -70,9 +70,5 @@ class ConjugateGradient(GenericMinimiser):
         self.niter += 1
         return x, p, r
 
-
     def _initial_direction(self, x, r):
         return r
-
-    def _choose_direction(self, x, p, r):
-        beta = - np.dot(A @ p, r) / np.dot(A @ p, p)
